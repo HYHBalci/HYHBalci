@@ -392,7 +392,7 @@ function languagesSvg(snapshot, theme) {
   const languages = languageShares(snapshot.code.languages);
   let content = text(32, 48, 'The code palette', { size: 26, weight: 650 })
     + text(32, 73, 'Language distribution across public, original repositories', { size: 14, fill: 'muted' })
-    + text(920, 48, `${formatNumber(snapshot.code.repositories)} repos`, { size: 13, weight: 600, fill: 'muted', anchor: 'end' });
+    + text(920, 48, `${formatNumber(snapshot.code.repositories)} ${snapshot.code.repositories === 1 ? 'repo' : 'repos'}`, { size: 13, weight: 600, fill: 'muted', anchor: 'end' });
   if (languages.length) {
     let position = 32;
     content += `<defs><clipPath id="palette-clip"><rect x="32" y="98" width="896" height="12" rx="6"/></clipPath></defs><g clip-path="url(#palette-clip)">`;
@@ -434,7 +434,7 @@ function snapshotSvg(snapshot, theme) {
   ];
   const maximum = Math.max(1, ...types.map(type => type.value));
   let content = text(32, 48, 'GitHub, at a glance', { size: 26, weight: 650 })
-    + text(32, 73, 'A public profile snapshot & a year of visible contribution types', { size: 14, fill: 'muted' });
+    + text(32, 73, 'A public profile snapshot & a year of public contribution details', { size: 14, fill: 'muted' });
   metrics.forEach((metric, index) => {
     const x = 32 + index * 305;
     content += `<rect x="${x}" y="94" width="286" height="90" rx="10" fill="${t.canvas}"/>`
@@ -449,7 +449,7 @@ function snapshotSvg(snapshot, theme) {
       + `<rect x="179" y="${y - 12}" width="${(type.value / maximum * 650).toFixed(2)}" height="11" rx="5.5" fill="${type.color}"/>`
       + text(920, y, formatNumber(type.value), { size: 15, weight: 600, anchor: 'end' });
   });
-  content += text(920, 355, 'Contribution types use the activity window above', { size: 12, fill: 'muted', anchor: 'end' });
+  content += text(920, 355, 'Public counts; the calendar can also include anonymous private activity', { size: 12, fill: 'muted', anchor: 'end' });
   return svg(snapshot, theme, 383, `${snapshot.username}: GitHub profile snapshot`,
     `${snapshot.publicProfile.repositories} public owned repositories including forks; ${snapshot.publicProfile.followers} followers; ${snapshot.publicProfile.stars} stars on public owned nonfork repositories excluding the profile repository. From ${snapshot.window.startDate} to ${snapshot.window.endDate}: ${types.map(type => `${type.value} ${type.label.toLowerCase()}`).join(', ')}.`, content);
 }
@@ -502,7 +502,7 @@ function mobileLanguagesSvg(snapshot, theme) {
   const languages = languageShares(snapshot.code.languages);
   let content = text(24, 45, 'The code palette', { size: 24, weight: 650 })
     + text(24, 69, 'Language distribution across public,', { size: 13, fill: 'muted' })
-    + text(24, 88, `original repositories · ${formatNumber(snapshot.code.repositories)} repos`, { size: 13, fill: 'muted' });
+    + text(24, 88, `original repositories · ${formatNumber(snapshot.code.repositories)} ${snapshot.code.repositories === 1 ? 'repo' : 'repos'}`, { size: 13, fill: 'muted' });
   if (languages.length) {
     let position = 24;
     content += `<defs><clipPath id="palette-clip"><rect x="24" y="108" width="432" height="10" rx="5"/></clipPath></defs><g clip-path="url(#palette-clip)">`;
@@ -545,7 +545,7 @@ function mobileSnapshotSvg(snapshot, theme) {
   ];
   const maximum = Math.max(1, ...types.map(type => type.value));
   let content = text(24, 45, 'GitHub, at a glance', { size: 24, weight: 650 })
-    + text(24, 69, 'A public snapshot & visible contribution types', { size: 13, fill: 'muted' });
+    + text(24, 69, 'A public snapshot & public contribution details', { size: 13, fill: 'muted' });
   metrics.forEach((metric, index) => {
     const y = 94 + index * 71;
     content += `<rect x="24" y="${y}" width="432" height="64" rx="10" fill="${t.canvas}"/>`
@@ -560,7 +560,8 @@ function mobileSnapshotSvg(snapshot, theme) {
       + `<rect x="24" y="${y + 8}" width="432" height="8" rx="4" fill="${t.canvas}"/>`
       + `<rect x="24" y="${y + 8}" width="${(type.value / maximum * 432).toFixed(2)}" height="8" rx="4" fill="${type.color}"/>`;
   });
-  content += text(24, 487, 'Contribution types follow the activity window.', { size: 12, fill: 'muted' });
+  content += text(24, 480, 'Public counts; the calendar can also include', { size: 12, fill: 'muted' })
+    + text(24, 497, 'anonymous private activity.', { size: 12, fill: 'muted' });
   return svg(snapshot, theme, 548, `${snapshot.username}: GitHub profile snapshot`,
     `${snapshot.publicProfile.repositories} public owned repositories including forks; ${snapshot.publicProfile.followers} followers; ${snapshot.publicProfile.stars} stars on public owned nonfork repositories excluding the profile repository. From ${snapshot.window.startDate} to ${snapshot.window.endDate}: ${types.map(type => `${type.value} ${type.label.toLowerCase()}`).join(', ')}.`, content, 480);
 }

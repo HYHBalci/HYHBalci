@@ -33,7 +33,7 @@ I also keep public forks of [stochtree](https://github.com/HYHBalci/stochtree), 
   <source media="(max-width: 600px) and (prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HYHBalci/HYHBalci/main/assets/snapshot-light-mobile.svg">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HYHBalci/HYHBalci/main/assets/snapshot-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/HYHBalci/HYHBalci/main/assets/snapshot-light.svg">
-  <img alt="GitHub profile snapshot and a breakdown of visible commits, pull requests, issues, and reviews over the past year." src="https://raw.githubusercontent.com/HYHBalci/HYHBalci/main/assets/snapshot-light.svg" width="100%">
+  <img alt="GitHub profile snapshot and a breakdown of public commits, pull requests, issues, and reviews over the past year." src="https://raw.githubusercontent.com/HYHBalci/HYHBalci/main/assets/snapshot-light.svg" width="100%">
 </picture>
 
 <picture>
@@ -44,4 +44,4 @@ I also keep public forks of [stochtree](https://github.com/HYHBalci/stochtree), 
   <img alt="Programming language mix by code bytes in my original public repositories, excluding forks, archived repositories, and this profile repository." src="https://raw.githubusercontent.com/HYHBalci/HYHBalci/main/assets/languages-light.svg" width="100%">
 </picture>
 
-<sub>Refreshed daily from GitHub. Activity reflects what GitHub makes visible; the language mix measures code bytes in original public repositories, rather than proficiency or time spent coding.</sub>
+<sub>Refreshed daily from GitHub. The activity calendar includes contributions GitHub makes visible, including anonymous private counts when enabled. The breakdown shows public contribution details, and the language mix measures code bytes in original public repositories.</sub>
