@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="270" viewBox="0 0 960 270" role="img" aria-labelledby="title desc">
+  <title id="title">Yusufhan Balci — statistics, machine learning and causal inference</title>
+  <desc id="desc">PhD candidate at Amsterdam UMC and VU Amsterdam. A causal diagram connects covariates X, treatment T and outcome Y.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#526b80"/></marker></defs>
+  <rect width="960" height="270" rx="18" fill="#edf4fb"/>
+  <path d="M620 0 Q580 130 650 270 H942 Q960 270 960 252 V18 Q960 0 942 0Z" fill="#f8faff"/>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="40" y="78" font-size="47" font-weight="700" letter-spacing="-1.6" fill="#17334d">Yusufhan Balci</text>
+    <text x="42" y="123" font-size="25" fill="#17334d">Statistics, machine learning</text>
+    <text x="42" y="158" font-size="25" fill="#17334d">&amp; causal inference.</text>
+    <text x="42" y="209" font-size="16" fill="#526b80">PhD candidate</text>
+    <text x="42" y="233" font-size="16" fill="#526b80">Amsterdam UMC &amp; VU Amsterdam</text>
+    <g fill="none" stroke="#b7cde1" stroke-width="1">
+      <circle cx="792" cy="135" r="101" stroke-dasharray="3 7"/>
+      <path d="M664 230H930"/>
+    </g>
+    <g fill="none" stroke="#526b80" stroke-width="2.1" marker-end="url(#arrow)">
+      <path d="M776 92L721 168"/>
+      <path d="M809 92L864 168"/>
+      <path d="M733 188H850"/>
+    </g>
+    <circle cx="792" cy="69" r="26" fill="#386fc9"/>
+    <circle cx="707" cy="188" r="26" fill="#218579"/>
+    <circle cx="877" cy="188" r="26" fill="#ce7858"/>
+    <g font-size="22" font-weight="600" text-anchor="middle" fill="#ffffff">
+      <text x="792" y="77">X</text><text x="707" y="196">T</text><text x="877" y="196">Y</text>
+    </g>
+  </g>
+</svg>
